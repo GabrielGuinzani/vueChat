@@ -19,28 +19,14 @@
           <div class="msg-chat">Olá, como posso ajudar?</div>
         </div>
       </div>
+      <message-sender @message-sent="handleMessageSent" />
+
       <form id="form-chat-send" action="index.html" method="post">
         <input type="text" id="message" name="message" placeholder="Digite sua mensagem..." class="typebar">
         <button type="submit" class="botao">ENVIAR</button>
       </form>
     </div>
     <div id="app"></div>
-    <script>
-      import MessageSender from './components/MessageSender.vue'
-      
-      export default {
-        name: 'App',
-        components: {
-          MessageSender
-        },
-        methods: {
-          handleMessageSent(message) {
-            // faça algo com a mensagem enviada
-            console.log(message);
-          }
-        }
-      }
-      </script>
+    <script type="module" src="/src/main.js"></script>
   </body>
-
 </html>
