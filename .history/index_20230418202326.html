@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHAT HTML - GABRIEL FERREIRA</title>
+    <link rel="stylesheet" href="chat.css" />
+  </head>
+  <body>
+    <div id="chat-screen">
+      <header>
+        <div class="titulo">
+          <h2>ATENDIMENTO ONLINE</h2>
+        </div>
+      </header>
+      <div class="messages-list" id="conversa">
+        <div v-for="message in messages" class="message-item">
+          <div class="msg-user"><strong>{{ message.author }} diz:</strong></div>
+          <div class="msg-chat">{{ message.text }}</div>
+        </div>
+      </div>
+      <form id="form-chat-send" @submit.prevent="sendMessage">
+        <input type="text" id="message" v-model="newMessage" placeholder="Digite sua mensagem..." class="typebar">
+        <button type="submit" class="botao">ENVIAR</button>
+      </form>
+    </div>
+  </body>
+  <script src="https://cdn.jsdelivr.net/npm/vue"></script>  
+</html>
