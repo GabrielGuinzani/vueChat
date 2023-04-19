@@ -99,6 +99,7 @@ body {
 }
 
 .message-item2 {
+  display: inline;
   background-color: #e0f7e0;
   border-radius: 5px;
   padding: 10px;

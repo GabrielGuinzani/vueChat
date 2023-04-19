@@ -12,7 +12,7 @@
       <div v-for="(message, index) in messages" :key="index" :class="[message.type === 'user' ? 'message-item2' : 'message-item']">
         <div class="msg-user" v-if="message.type === 'user'"><strong>{{ message.author }} diz:</strong></div>
         <div class="msg-chat">{{ message.text }}</div>
-      </div>      
+      </div>
     </div>
     <form id="form-chat-send" @submit.prevent="sendMessage">
       <input id="message" type="text" class="typebar" v-model="messageText" placeholder="Digite sua mensagem aqui">
@@ -57,21 +57,20 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 700px;
+  height: 75%;
   width: 50%;
   margin: auto;
 }
 
 #chat-screen {
   width: 100%;
-  height: inherit;
+  height: 600px;
   margin: 0 auto;
   border: 1px solid #ccc;
   background-color: #fff;
   padding: 20px;
   display: flex;
   flex-direction: column;
-  overflow-y: auto;
 }
 
 .titulo {
@@ -85,7 +84,6 @@ body {
   flex: 1;
   overflow-y: auto;
   width: inherit;
-  height: 500px;
 }
 
 .message-item {
@@ -95,17 +93,15 @@ body {
   margin-bottom: 10px;
   color: rgb(75, 72, 72);
   text-align: left;
-  width: max-content
 }
 
 .message-item2 {
-  background-color: #e0f7e0;
+  background-color: #c2ebdf;
   border-radius: 5px;
   padding: 10px;
   margin-bottom: 10px;
   color: rgb(75, 72, 72);
   text-align: end;
-  width: auto;
 }
 
 .msg-user {

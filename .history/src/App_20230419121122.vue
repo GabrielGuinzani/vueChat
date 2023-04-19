@@ -57,7 +57,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 700px;
+  height: auto;
   width: 50%;
   margin: auto;
 }
@@ -71,7 +71,6 @@ body {
   padding: 20px;
   display: flex;
   flex-direction: column;
-  overflow-y: auto;
 }
 
 .titulo {
@@ -95,7 +94,6 @@ body {
   margin-bottom: 10px;
   color: rgb(75, 72, 72);
   text-align: left;
-  width: max-content
 }
 
 .message-item2 {
@@ -105,7 +103,6 @@ body {
   margin-bottom: 10px;
   color: rgb(75, 72, 72);
   text-align: end;
-  width: auto;
 }
 
 .msg-user {

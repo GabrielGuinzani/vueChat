@@ -105,7 +105,6 @@ body {
   margin-bottom: 10px;
   color: rgb(75, 72, 72);
   text-align: end;
-  width: auto;
 }
 
 .msg-user {
