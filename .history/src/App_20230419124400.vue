@@ -111,7 +111,6 @@ body {
   margin-right: 10px;
   background-color: #e0f7e0;
   padding: 10px;
-  border-radius: 9px;
 }
 
 .msg-user {

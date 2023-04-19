@@ -101,17 +101,16 @@ body {
 }
 
 .message-item2 {
-  display: flex;
-  max-width: fit-content;
-  flex-direction: column;
-  justify-content: flex-end;
-  margin-bottom: 20px;
-  text-align: right;
-  margin-left: auto;
-  margin-right: 10px;
   background-color: #e0f7e0;
-  padding: 10px;
   border-radius: 9px;
+  padding: 10px;
+
+  color: rgb(75, 72, 72);
+  width: auto;
+  margin: 10px auto;
+  text-align: end;
+  overflow: auto;
+  word-break: break-all;
 }
 
 .msg-user {

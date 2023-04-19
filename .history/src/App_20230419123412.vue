@@ -90,28 +90,22 @@ body {
 
 .message-item {
   background-color: #f2f2f2;
-  border-radius: 9px;
+  border-radius: 5px;
   padding: 10px;
   margin-bottom: 10px;
   color: rgb(75, 72, 72);
   text-align: left;
-  width: fit-content;
-  overflow: auto;
-  word-break: break-all;
+  width: max-content
 }
 
 .message-item2 {
-  display: flex;
-  max-width: fit-content;
-  flex-direction: column;
-  justify-content: flex-end;
-  margin-bottom: 20px;
-  text-align: right;
-  margin-left: auto;
-  margin-right: 10px;
   background-color: #e0f7e0;
+  border-radius: 5px;
   padding: 10px;
-  border-radius: 9px;
+  margin-bottom: 10px;
+  color: rgb(75, 72, 72);
+  width: max-;
+  text-align: right;
 }
 
 .msg-user {
