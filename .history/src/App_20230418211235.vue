@@ -52,12 +52,6 @@ header {
     <div class="titulo">
       <h2>Atendimento Online</h2>
     </div>
-    <div class="messages-list" id="conversa">
-    <div class="message-item">
-      <div class="msg-user"><strong>Atendente diz:</strong></div>
-      <div class="msg-chat">Olá, como posso ajudar?</div>
-    </div>
-  </div>
     <div class="messages-list" ref="messagesList">
       <div v-for="(message, index) in messages" :key="index" :class="[message.type === 'user' ? 'message-item2' : 'message-item']">
         <div class="msg-user" v-if="message.type === 'user'"><strong>{{ message.author }} diz:</strong></div>

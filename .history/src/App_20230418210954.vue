@@ -52,12 +52,6 @@ header {
     <div class="titulo">
       <h2>Atendimento Online</h2>
     </div>
-    <div class="messages-list" id="conversa">
-    <div class="message-item">
-      <div class="msg-user"><strong>Atendente diz:</strong></div>
-      <div class="msg-chat">Olá, como posso ajudar?</div>
-    </div>
-  </div>
     <div class="messages-list" ref="messagesList">
       <div v-for="(message, index) in messages" :key="index" :class="[message.type === 'user' ? 'message-item2' : 'message-item']">
         <div class="msg-user" v-if="message.type === 'user'"><strong>{{ message.author }} diz:</strong></div>
@@ -102,18 +96,6 @@ export default {
 </script>
 
 <style>
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-#app {
-  width: 800px;
-  height: 600px;
-}   
-
 #chat-screen {
   width: 500px;
   height: 600px;
@@ -181,18 +163,6 @@ body {
   margin-top: 10px;
   cursor: pointer;
 }
-
-  
-  .botao:hover {
-    background-color: #0061a7;
-    cursor: pointer;
-  }
-  
-  #form-chat-send {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-  }
 </style>
 
 

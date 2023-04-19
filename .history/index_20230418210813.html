@@ -29,15 +29,27 @@
 </body>
 </html> -->
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Vue Chat App</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    #app {
+      width: 800px;
+      height: 600px;
+    }
+  </style>
   <script src="https://unpkg.com/vue@3.2.6/dist/vue.global.js"></script>
 </head>
 <body>
-  
   <div id="app">
+    <chat></chat>
   </div>
 
   <script type="module" src="/src/main.js"></script>

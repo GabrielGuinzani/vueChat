@@ -50,14 +50,8 @@ header {
 <template>
   <div id="chat-screen">
     <div class="titulo">
-      <h2>Atendimento Online</h2>
+      <h2>Chat com VueJS</h2>
     </div>
-    <div class="messages-list" id="conversa">
-    <div class="message-item">
-      <div class="msg-user"><strong>Atendente diz:</strong></div>
-      <div class="msg-chat">Olá, como posso ajudar?</div>
-    </div>
-  </div>
     <div class="messages-list" ref="messagesList">
       <div v-for="(message, index) in messages" :key="index" :class="[message.type === 'user' ? 'message-item2' : 'message-item']">
         <div class="msg-user" v-if="message.type === 'user'"><strong>{{ message.author }} diz:</strong></div>
@@ -100,100 +94,156 @@ export default {
   }
 }
 </script>
-
 <style>
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-#app {
-  width: 800px;
-  height: 600px;
-}   
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+ 
+body, h1, h2, h3, h4, h5, h6, p, ol, ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+ 
+ol, ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+#form-chat-send {
+  display: flex; 
+  align-items: center; 
+  margin-top: 20px;
+}
+
+.messages-list{
+  margin: 15px 15px;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  overflow: auto;
+  height: 400px;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 8px;
+
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #666;
+  border-radius: 15px;
+
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}
+
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  margin: 0;
+}
 
 #chat-screen {
-  width: 500px;
-  height: 600px;
-  margin: 0 auto;
-  border: 1px solid #ccc;
-  background-color: #fff;
+  max-width: 720px;
+  margin: 5% auto 20px auto;
   padding: 20px;
-  display: flex;
-  flex-direction: column;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 5px 10px rgba(0,0,0,.1);
 }
 
 .titulo {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
-  font-size: 24px;
   margin-bottom: 20px;
-  color: gray;
+  font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+  color: #666;
 }
 
-.messages-list {
-  flex: 1;
-  overflow-y: auto;
+.titulo h2 {
+  font-weight: bold;
+  font-size: 24px;
 }
 
 .message-item {
-  background-color: #f2f2f2;
-  border-radius: 5px;
-  padding: 10px;
-  margin-bottom: 10px;
-  color: gray;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  max-width: fit-content;
+  margin-right: auto;
 }
 
 .message-item2 {
-  background-color: #e6f7ff;
-  border-radius: 5px;
-  padding: 10px;
-  margin-bottom: 10px;
-  color: gray;
+  display: flex;
+  max-width: fit-content;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+  text-align: right;
+  margin-left: auto;
+  margin-right: 10px;
 }
 
 .msg-user {
+  color: #666;
+  font-size: 14px;
+  margin-right: 10px;
+  font-weight: bold;
   margin-bottom: 5px;
-  color: gray;
 }
 
 .msg-chat {
-  color: gray;
+  background-color: #f1f1f1;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 14px;
+  overflow-wrap: break-word;
 }
 
 .typebar {
-  width: 100%;
+  flex: 1; 
   padding: 10px;
   border: none;
-  border-bottom: 1px solid #ccc;
-  margin-right: 10px;
-  font-size: 16px;
-  color: gray;
+  border-bottom: 2px solid #ddd;
 }
 
 .botao {
-  background-color: #4CAF50;
-  color: #fff;
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
   border: none;
   border-radius: 5px;
-  padding: 10px;
-  margin-top: 10px;
   cursor: pointer;
+  font-size: 14px;
+  margin-left: 10px; 
+  transition: 0.6s;
 }
 
-  
-  .botao:hover {
-    background-color: #0061a7;
-    cursor: pointer;
-  }
-  
-  #form-chat-send {
-    display: flex;
-    justify-content: center;
-    margin-top: 20px;
-  }
+.botao:hover {
+  background-color: #3e8e41;
+}
 </style>
-
-
-
