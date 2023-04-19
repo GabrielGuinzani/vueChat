@@ -124,7 +124,7 @@ export default {
   }
 }
 </script>
-
+<!-- 
 <style>
 body {
   display: flex;
@@ -217,14 +217,13 @@ body {
     justify-content: center;
     margin-top: 20px;
   }
-</style>
-<!-- 
-<style>
+</style> -->
 
+<style>
   #chat-screen {
     margin: auto;
-    width: 50%;
-    height: 100vh;
+    max-width: 500px;
+    height: 500px;
     background-color: #fff;
     border-radius: 10px;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
@@ -233,6 +232,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
   }
+
   .titulo {
     background-color: #4CAF50;
     color: #fff;
@@ -298,4 +298,4 @@ body {
     cursor: pointer;
     margin-left: 10px;
   }
-</style> -->
+</style>

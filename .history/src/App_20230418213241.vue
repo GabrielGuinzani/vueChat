@@ -124,7 +124,7 @@ export default {
   }
 }
 </script>
-
+<!-- 
 <style>
 body {
   display: flex;
@@ -217,12 +217,11 @@ body {
     justify-content: center;
     margin-top: 20px;
   }
-</style>
-<!-- 
-<style>
+</style> -->
 
+<style>
   #chat-screen {
-    margin: auto;
+    margin: 0 auto;
     width: 50%;
     height: 100vh;
     background-color: #fff;
@@ -298,4 +297,4 @@ body {
     cursor: pointer;
     margin-left: 10px;
   }
-</style> -->
+</style>
